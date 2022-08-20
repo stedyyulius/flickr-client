@@ -3,7 +3,11 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 
-export const SearchInput:React.FC = () => {
+interface Props {
+    onSearch: () => void
+}
+
+export const SearchInput = (props: Props) => {
   return (
     <Paper
       component="form"
@@ -19,7 +23,7 @@ export const SearchInput:React.FC = () => {
         placeholder="Search"
         inputProps={{ 'aria-label': 'search google maps' }}
       />
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+      <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onClick={props.onSearch}>
         <SearchIcon />
       </IconButton>
     </Paper>
