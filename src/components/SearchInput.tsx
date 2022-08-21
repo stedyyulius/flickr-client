@@ -39,7 +39,7 @@ export const SearchInput = (props: Props) => {
                 inputProps={{ 'aria-label': 'search google maps' }}
                 onChange={handleInput}
             />
-            <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onClick={handleSearch}>
+            <IconButton id="search-button" type="button" sx={{ p: '10px' }} aria-label="search" onClick={handleSearch}>
                 <SearchIcon />
             </IconButton>
         </Paper>
